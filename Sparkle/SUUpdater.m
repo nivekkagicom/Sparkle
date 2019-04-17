@@ -26,6 +26,7 @@
 #import "SUSystemProfiler.h"
 #import "SUSystemUpdateInfo.h"
 #import "SUSignatures.h"
+#import "SUOperatingSystem.h"
 
 NSString *const SUUpdaterDidFinishLoadingAppCastNotification = @"SUUpdaterDidFinishLoadingAppCastNotification";
 NSString *const SUUpdaterDidFindValidUpdateNotification = @"SUUpdaterDidFindValidUpdateNotification";
@@ -145,18 +146,19 @@ static NSString *const SUUpdaterDefaultsObservationContext = @"SUUpdaterDefaults
     BOOL hostIsCodeSigned = [SUCodeSigningVerifier bundleAtURLIsCodeSigned:self.host.bundle.bundleURL];
     NSURL *feedURL = [self feedURL];
     BOOL servingOverHttps = [[[feedURL scheme] lowercaseString] isEqualToString:@"https"];
+    NSString *name = self.host.name;
 
     if (!hasPublicKey) {
         if (!isMainBundle) {
             [self showAlertText:SULocalizedString(@"Auto-update not configured", nil)
-                informativeText:SULocalizedString(@"For security reasons, you need to sign your updates with a EdDSA key. See Sparkle's documentation for more information.", nil)];
+                informativeText:[NSString stringWithFormat:SULocalizedString(@"For security reasons, updates to %@ need to be signed with an EdDSA key. See Sparkle's documentation for more information.", nil), name]];
         } else {
             if (!hostIsCodeSigned) {
                 [self showAlertText:SULocalizedString(@"Auto-update not configured", nil)
-                    informativeText:SULocalizedString(@"For security reasons, you need to code sign your application or sign your updates with a EdDSA key. See https://sparkle-project.org/documentation/ for more information.", nil)];
+                    informativeText:[NSString stringWithFormat:SULocalizedString(@"For security reasons, %@ needs to be code-signed or its updates need to be signed with an EdDSA key. See https://sparkle-project.org/documentation/ for more information.", nil), name]];
             } else if (!servingOverHttps) {
                 [self showAlertText:SULocalizedString(@"Auto-update not configured", nil)
-                    informativeText:SULocalizedString(@"For security reasons, you need to serve your updates over HTTPS and/or sign your updates with a EdDSA key. See https://sparkle-project.org/documentation/ for more information.", nil)];
+                    informativeText:[NSString stringWithFormat:SULocalizedString(@"For security reasons, updates to %@ need to be served over HTTPS and/or signed with an EdDSA key. See https://sparkle-project.org/documentation/ for more information.", nil), name]];
             }
         }
     }
@@ -297,8 +299,11 @@ static NSString *const SUUpdaterDefaultsObservationContext = @"SUUpdaterDefaults
     BOOL automatic = [self automaticallyDownloadsUpdates];
 
     if (!automatic) {
-        if (@available(macOS 10.9, *)) {
+        if (SUAVAILABLE(10, 9)) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
             NSUserDefaults *defaults = [[NSUserDefaults alloc] initWithSuiteName:@"com.apple.notificationcenterui"];
+#pragma clang diagnostic pop
             BOOL dnd = [defaults boolForKey:@"doNotDisturb"];
             if (dnd) {
                 SULog(SULogLevelDefault, @"Delayed update, because Do Not Disturb is on");
