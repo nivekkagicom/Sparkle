@@ -19,7 +19,14 @@ static NSData *decode(NSString *str) {
     }
 
     NSString *stripped = [str stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
-    return [[NSData alloc] initWithBase64Encoding:stripped];
+    if (@available(macOS 10.9, *)) {
+        return [[NSData alloc] initWithBase64EncodedString:stripped options:0];
+    } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        return [[NSData alloc] initWithBase64Encoding:stripped];
+#pragma clang diagnostic pop
+    }
 }
 
 - (instancetype)initWithDsa:(NSString * _Nullable)maybeDsa ed:(NSString * _Nullable)maybeEd25519
