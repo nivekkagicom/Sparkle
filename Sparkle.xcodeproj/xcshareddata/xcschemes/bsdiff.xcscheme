@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1420DF491962329200203BB0"
-               BuildableName = "Documentation"
-               BlueprintName = "Documentation"
+               BlueprintIdentifier = "EA4311E9229D651300A5503D"
+               BuildableName = "libbsdiff.a"
+               BlueprintName = "bsdiff"
                ReferencedContainer = "container:Sparkle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,15 +40,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1420DF491962329200203BB0"
-            BuildableName = "Documentation"
-            BlueprintName = "Documentation"
-            ReferencedContainer = "container:Sparkle.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -59,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1420DF491962329200203BB0"
-            BuildableName = "Documentation"
-            BlueprintName = "Documentation"
+            BlueprintIdentifier = "EA4311E9229D651300A5503D"
+            BuildableName = "libbsdiff.a"
+            BlueprintName = "bsdiff"
             ReferencedContainer = "container:Sparkle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

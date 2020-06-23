@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1420DF491962329200203BB0"
-               BuildableName = "Documentation"
-               BlueprintName = "Documentation"
+               BlueprintIdentifier = "55C14BB6136EEF1500649790"
+               BuildableName = "Autoupdate.app"
+               BlueprintName = "Autoupdate"
                ReferencedContainer = "container:Sparkle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -40,15 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1420DF491962329200203BB0"
-            BuildableName = "Documentation"
-            BlueprintName = "Documentation"
+            BlueprintIdentifier = "55C14BB6136EEF1500649790"
+            BuildableName = "Autoupdate.app"
+            BlueprintName = "Autoupdate"
             ReferencedContainer = "container:Sparkle.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -56,15 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1420DF491962329200203BB0"
-            BuildableName = "Documentation"
-            BlueprintName = "Documentation"
+            BlueprintIdentifier = "55C14BB6136EEF1500649790"
+            BuildableName = "Autoupdate.app"
+            BlueprintName = "Autoupdate"
             ReferencedContainer = "container:Sparkle.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

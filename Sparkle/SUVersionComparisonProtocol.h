@@ -10,7 +10,12 @@
 #define SUVERSIONCOMPARISONPROTOCOL_H
 
 #if __has_feature(modules)
+#pragma clang diagnostic push
+#if __has_warning("-Watimport-in-framework-header")
+#pragma clang diagnostic ignored "-Watimport-in-framework-header"
+#endif
 @import Foundation;
+#pragma clang diagnostic pop
 #else
 #import <Foundation/Foundation.h>
 #endif
