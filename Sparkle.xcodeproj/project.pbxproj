@@ -1989,7 +1989,7 @@
 				ORGANIZATIONNAME = "Sparkle Project";
 				TargetAttributes = {
 					55C14BB6136EEF1500649790 = {
-						DevelopmentTeam = PZM93MW7N8;
+						DevelopmentTeam = BK85R8X44N;
 						ProvisioningStyle = Automatic;
 					};
 					5A5ADED6214EDE4900DF0099 = {
@@ -2010,7 +2010,7 @@
 					};
 					722954B31D04ADAF00ECF9CA = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = PZM93MW7N8;
+						DevelopmentTeam = BK85R8X44N;
 						ProvisioningStyle = Automatic;
 					};
 					726B2B5C1C645FC900388755 = {
@@ -2875,7 +2875,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PZM93MW7N8;
+				DEVELOPMENT_TEAM = BK85R8X44N;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Coverage;
@@ -2952,7 +2952,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PZM93MW7N8;
+				DEVELOPMENT_TEAM = BK85R8X44N;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
@@ -2963,7 +2963,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PZM93MW7N8;
+				DEVELOPMENT_TEAM = BK85R8X44N;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
@@ -3117,7 +3117,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PZM93MW7N8;
+				DEVELOPMENT_TEAM = BK85R8X44N;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3130,7 +3130,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PZM93MW7N8;
+				DEVELOPMENT_TEAM = BK85R8X44N;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -3143,7 +3143,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PZM93MW7N8;
+				DEVELOPMENT_TEAM = BK85R8X44N;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
